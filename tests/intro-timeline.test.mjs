@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+import {ENERGY_SWEEP_DURATION,getIntroPhase,getEnergyProgress} from '../src/intro-timeline.js';
+assert.equal(getIntroPhase(0),'energy');
+assert.equal(getIntroPhase(ENERGY_SWEEP_DURATION-.001),'energy');
+assert.equal(getIntroPhase(ENERGY_SWEEP_DURATION),'ball');
+assert.equal(getEnergyProgress(-2),0);
+assert.equal(getEnergyProgress(100),1);
+const source=readFileSync(new URL('../src/experience.js',import.meta.url),'utf8');
+assert.ok(source.includes('ballStartedAt=now'), 'Start the unchanged ball clock only after the sweep');
+assert.ok(source.includes('request!==introRequest'), 'Skip must cancel pending asset initialization');
+assert.ok(!source.includes('flamePath'), 'Do not restore the flat flame-tongue renderer');
+assert.ok(existsSync(new URL('../public/assets/flow-smoke-cyan.png',import.meta.url)));
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+assert.ok(html.includes('id="energySweepCanvas"'));
+assert.ok(html.includes('class="eye-glow"'));
+console.log('PASS: energy prelude, zero-reset ball clock, skip cancellation and smoke assets');
