@@ -1,0 +1,20 @@
+{
+  "name": "sadat-player-17-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A cinematic football-inspired portfolio for AI engineer Sadat Junaid Akunjee.",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.mjs",
+    "build:vite": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/run.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}

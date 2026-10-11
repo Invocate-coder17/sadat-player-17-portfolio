@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#05070a">
+  <meta name="description" content="Sadat Junaid Akunjee, AI engineer, builder and Player 17. A cinematic football portfolio.">
+  <meta property="og:title" content="Sadat Junaid Akunjee | Player 17">
+  <meta property="og:description" content="AI engineering, told like a centre-back's match story.">
+  <title>Sadat Junaid Akunjee | Player 17</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <section class="cinema-intro" id="cinemaIntro" aria-label="Cinematic player introduction">
+    <canvas class="ball-cam-canvas" id="ballCamCanvas" aria-hidden="true"></canvas>
+    <div class="energy-prelude" aria-hidden="true">
+      <canvas id="energySweepCanvas" class="energy-sweep-canvas"></canvas>
+      <div class="energy-fallback"></div>
+      <div class="energy-ident"><small>PLAYER 17</small><b>FLOW STATE</b><span>AWAKENING</span></div>
+    </div>
+    <div class="intro-shutter shutter-left" aria-hidden="true"></div>
+    <div class="intro-shutter shutter-right" aria-hidden="true"></div>
+    <div class="intro-hud" aria-hidden="true">
+      <span id="introTelemetry">THE MATCH BEGINS</span><span>PLAYER 17</span>
+    </div>
+    <div class="intro-player" aria-hidden="true">
+      <img src="/assets/player-17.png" alt="">
+      <span class="intro-number">17</span>
+    </div>
+    <div class="intro-title" aria-hidden="true">
+      <small>AI ENGINEER // CENTRE-BACK MINDSET</small>
+      <strong>SADAT <em>JUNAID</em> AKUNJEE</strong>
+      <span>THE GAME STARTS HERE</span>
+    </div>
+    <button class="intro-skip" id="skipIntro" type="button">SKIP INTRO ↗</button>
+  </section>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-meter" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="matchbar">
+    <a class="crest" href="#kickoff" aria-label="Back to kickoff"><span>17</span><b>SJA</b></a>
+    <div class="scoreline" aria-label="Portfolio match status">
+      <span>AI ENGINEERING</span><strong>01</strong><i>:</i><strong>00</strong><span>THE IMPOSSIBLE</span>
+    </div>
+    <div class="matchbar-actions"><button id="replayIntro" type="button">REPLAY INTRO</button><a class="matchbar-cta" href="#contact">CONTACT</a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="kickoff" aria-labelledby="heroTitle">
+      <div class="stadium-grid" aria-hidden="true"></div>
+      <div class="flood flood-a" aria-hidden="true"></div>
+      <div class="flood flood-b" aria-hidden="true"></div>
+
+      <div class="hero-copy reveal">
+        <div class="broadcast-kicker"><span class="live-dot"></span> PLAYER INTRODUCTION · MELBOURNE</div>
+        <p class="season">MONASH UNIVERSITY · CLASS OF 2026</p>
+        <h1 id="heroTitle"><span>SADAT JUNAID</span><span>AKUNJEE</span></h1>
+        <p class="hero-role">AI ENGINEER <em>/</em> CENTRE-BACK MINDSET</p>
+        <p class="hero-blurb">I build AI systems the way a defender reads the game: anticipate risk, control the space, and deliver under pressure.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#lineup">ENTER THE PITCH <span>↓</span></a>
+          <a class="text-link" href="/Sadat_Junaid_Akunjee_Resume.pdf" download>DOWNLOAD RÉSUMÉ ↗</a>
+          <button class="flow-trigger" id="flowTrigger" type="button"><span>◈</span> UNLOCK FLOW STATE</button>
+        </div>
+      </div>
+
+      <div class="player-stage reveal" data-delay="1">
+        <img class="aura-texture" src="/assets/flow-smoke-cyan.png" alt="" aria-hidden="true">
+        <canvas class="aura-canvas" id="auraCanvas" aria-hidden="true"></canvas>
+        <div class="aura-state" aria-hidden="true"><small>PLAYER 17</small><b>FLOW STATE</b><span>AWAKENED</span></div>
+        <div class="player-card" id="playerCard" tabindex="0" role="img" aria-label="Interactive full-body presentation of Sadat as Player 17. Drag to rotate.">
+          <div class="player-depth depth-3" aria-hidden="true"></div>
+          <div class="player-depth depth-2" aria-hidden="true"></div>
+          <div class="player-depth depth-1" aria-hidden="true"></div>
+          <div class="player-portrait">
+            <img src="/assets/player-17.png" alt="Sadat in an original navy number 17 football kit">
+            <span class="eye-glow" aria-hidden="true"><i></i></span>
+          </div>
+        </div>
+        <img class="aura-veil" src="/assets/flow-smoke-cyan.png" alt="" aria-hidden="true">
+        <div class="drag-note"><span>↔</span> DRAG PLAYER TO ROTATE</div>
+        <div class="player-stat stat-role"><small>POSITION</small><b>AI / CB</b></div>
+        <div class="player-stat stat-number"><small>SQUAD</small><b>17</b></div>
+      </div>
+
+      <aside class="commentary-card" aria-label="Match commentary">
+        <span>COMMENTARY</span>
+        <p>“A builder who turns difficult systems into calm, measurable outcomes.”</p>
+      </aside>
+      <a class="scroll-cue" href="#lineup"><span></span>SCROLL TO KICK OFF</a>
+    </section>
+
+    <section class="lineup section" id="lineup" aria-labelledby="lineupTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 · THE LINE-UP</p>
+        <h2 id="lineupTitle">BUILT FOR THE<br><span>BIG MOMENTS.</span></h2>
+        <p>Four disciplines. One player profile. Every position contributes to the final result.</p>
+      </div>
+
+      <div class="formation-wrap reveal">
+        <div class="pitch" aria-label="Skills formation">
+          <div class="pitch-markings" aria-hidden="true"></div>
+          <article class="position pos-vision">
+            <span class="shirt">CV</span><small>LEFT CENTRE-BACK</small><h3>COMPUTER VISION</h3><p>OpenCV · SIFT · RANSAC</p>
+          </article>
+          <article class="position pos-reason">
+            <span class="shirt">AI</span><small>CAPTAIN</small><h3>PLANNING & ML</h3><p>PyTorch · PDDL · RL</p>
+          </article>
+          <article class="position pos-backend">
+            <span class="shirt">BE</span><small>RIGHT CENTRE-BACK</small><h3>BACKEND</h3><p>FastAPI · SQL · APIs</p>
+          </article>
+          <article class="position pos-cloud">
+            <span class="shirt">CL</span><small>DEEP-LYING KEEPER</small><h3>CLOUD DELIVERY</h3><p>AWS · Docker · ECS</p>
+          </article>
+        </div>
+        <div class="lineup-caption"><span>4-1-3-2</span><p>A technical formation designed for production AI.</p></div>
+      </div>
+    </section>
+
+    <section class="mentor cinematic-panel" id="standard" aria-labelledby="mentorTitle">
+      <img class="panel-image parallax-image" src="/assets/celebration-handshake-start.png" alt="Fictional tribute showing Sadat Junaid Akunjee and Sergio Ramos García sharing a waist-height handshake on a stadium touchline">
+      <div class="panel-scrim"></div>
+      <div class="panel-copy reveal">
+        <p class="eyebrow">02 · THE INSPIRATION</p>
+        <h2 id="mentorTitle">SERGIO RAMOS<br><span>GARCÍA.</span></h2>
+        <p class="mentor-thesis">THE CAPTAIN. THE MOMENT. THE SILVERWARE.</p>
+        <p>Four Champions League titles. Five LaLiga titles. The defender I look to for leadership, intensity and the courage to decide a match.</p>
+        <div class="tribute-label">IMAGINED CINEMATIC TRIBUTE</div>
+        <div class="values">
+          <span>ANTICIPATION</span><span>OWNERSHIP</span><span>COMPOSURE</span>
+        </div>
+      </div>
+      <div class="chapter-number" aria-hidden="true">02</div>
+      <div class="celebration-stage" id="celebrationStage" data-video-src="celebration-film-v2.mp4" aria-label="Fictional AI-generated full-body handshake and shared celebration" aria-hidden="true">
+        <div class="celebration-backdrop" aria-hidden="true"></div>
+        <video id="celebrationFilm" class="celebration-film" poster="./assets/celebration-handshake-start.png" muted playsinline controls preload="metadata" aria-label="Fictional celebration with Sadat Junaid Akunjee and Sergio Ramos García"></video>
+        <div class="celebration-photos">
+          <figure class="celebration-photo is-current"><img src="/assets/celebration-handshake-start.png" alt="AI-generated opening frame of a fictional football tribute"><figcaption>IMAGINED TRIBUTE</figcaption></figure>
+          <figure class="celebration-photo"><img src="/assets/celebration-handshake-end.png" alt="AI-generated closing frame of a fictional football celebration"><figcaption>LEADERSHIP INSPIRATION</figcaption></figure>
+        </div>
+        <div class="celebration-caption"><small>AI-GENERATED FICTIONAL FAN TRIBUTE</small><p id="celebrationBeat">THE STANDARD. THE MINDSET.</p><span>NOT REAL MEETING FOOTAGE OR ENDORSEMENT</span></div>
+        <button class="celebration-skip" id="skipCelebration" type="button">SKIP SCENE ↗</button>
+        <small class="celebration-credit">Fictional generated media</small>
+      </div>
+    </section>
+
+    <section class="goal cinematic-panel" id="goal" aria-labelledby="goalTitle">
+      <img class="panel-image parallax-image" src="/assets/header-goal.png" alt="Player 17 scoring a dramatic header in a fictional night match">
+      <div class="panel-scrim goal-scrim"></div>
+      <div class="goal-flash" aria-hidden="true"></div>
+      <div class="panel-copy goal-copy reveal">
+        <p class="eyebrow">03 · ATTACK THE PROBLEM</p>
+        <h2 id="goalTitle">RISE.<br>READ.<br><span>DELIVER.</span></h2>
+        <p>The winning header becomes the portfolio thesis: difficult delivery, precise timing, measurable impact.</p>
+      </div>
+      <div class="goal-call" aria-hidden="true"><span>GOAL</span><b>17'</b></div>
+      <div class="impact-strip">
+        <div><strong data-count="100" data-suffix="%">0%</strong><span>WIN RATE VS AI BASELINE</span></div>
+        <div><strong data-count="2832">0</strong><span>AGENTS COORDINATED</span></div>
+        <div><strong data-count="34">0</strong><span>VERIFIED SOURCES</span></div>
+        <div><strong data-count="3">0</strong><span>SUPPORTED LANGUAGES</span></div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects" aria-labelledby="projectsTitle">
+      <div class="section-heading projects-heading reveal">
+        <p class="eyebrow">04 · MATCH HIGHLIGHTS</p>
+        <h2 id="projectsTitle">THE WORK<br><span>ON THE BOARD.</span></h2>
+        <p>Every project occupies a role: protect the user, control complexity, and create the decisive advantage.</p>
+      </div>
+
+      <div class="project-board">
+        <article class="project-card project-feature reveal" tabindex="0">
+          <div class="project-index">01 / FLAGSHIP</div>
+          <div class="project-icon">✚</div>
+          <h3>SCREENING PATHWAY COMPANION</h3>
+          <p class="project-role">THE CAPTAIN · PRODUCTION AI</p>
+          <p>Live multilingual platform helping CALD Australians navigate bowel-cancer screening with a zero-hallucination, evidence-first architecture.</p>
+          <div class="metric-row"><b>16 intents</b><b>3 languages</b><b>34 sources</b></div>
+          <div class="stack">FASTAPI · HUGGING FACE · POSTGRESQL · AWS ECS · DOCKER</div>
+          <a href="https://github.com/Invocate-coder17/Screening_pathway_companion" target="_blank" rel="noopener">VIEW GITHUB ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-index">02 / PLAYMAKER</div>
+          <div class="project-icon">⌁</div>
+          <h3>HYBRID AI PLANNING SYSTEM</h3>
+          <p>Four-stage PDDL, A-star and Q-learning architecture with shared coordination memory.</p>
+          <div class="metric-row"><b>10-0 wins</b><b>77% fewer losses</b></div>
+          <div class="stack">PYTHON · PDDL · A-STAR · MULTI-AGENT RL</div>
+          <a href="https://github.com/Invocate-coder17/hybrid-ai-planning-system" target="_blank" rel="noopener">VIEW CASE STUDY ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-index">03 / VISION</div>
+          <div class="project-icon">◎</div>
+          <h3>IMAGE STITCHING FROM SCRATCH</h3>
+          <p>Harris corners, DLT homography, RANSAC and SIFT, implemented without black-box shortcuts.</p>
+          <div class="metric-row"><b>78-86% Harris overlap</b><b>2,000 RANSAC iterations</b></div>
+          <div class="stack">PYTHON · NUMPY · OPENCV · SCIKIT-IMAGE</div>
+          <a href="https://github.com/Invocate-coder17/computer-vision-stitching" target="_blank" rel="noopener">VIEW CASE STUDY ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-index">04 / CONTROL</div>
+          <div class="project-icon">▦</div>
+          <h3>DATA SYSTEM DESIGN</h3>
+          <p>Relational and document architectures spanning constraints, complex queries and nested JSON models.</p>
+          <div class="stack">ORACLE SQL · PL/SQL · MONGODB · JSON</div>
+          <a href="https://github.com/Invocate-coder17/transport-data-platform" target="_blank" rel="noopener">VIEW CASE STUDY ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="defence" id="defence" aria-labelledby="defenceTitle">
+      <div class="defence-field" aria-hidden="true">
+        <div class="danger-zone"></div>
+        <span class="ball b1"></span><span class="ball b2"></span><span class="ball b3"></span>
+        <span class="intercept i1"></span><span class="intercept i2"></span><span class="intercept i3"></span>
+      </div>
+      <div class="defence-copy reveal">
+        <p class="eyebrow">05 · DEFEND THE BOX</p>
+        <h2 id="defenceTitle">RELIABILITY IS<br>A POSITION.</h2>
+        <p>In high-stakes AI, the best result is often the failure you prevented.</p>
+      </div>
+      <div class="principles">
+        <article class="reveal"><b>01</b><h3>GROUND THE ANSWER</h3><p>Verified sources before generated confidence.</p></article>
+        <article class="reveal"><b>02</b><h3>READ THE RISK</h3><p>Negation checks, quality gates and explicit constraints.</p></article>
+        <article class="reveal"><b>03</b><h3>OWN THE SYSTEM</h3><p>Architecture that can be explained, tested and improved.</p></article>
+      </div>
+    </section>
+
+    <section class="career section" id="career" aria-labelledby="careerTitle">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 · CAREER TIMELINE</p>
+        <h2 id="careerTitle">FROM THE ACADEMY<br><span>TO PRODUCTION.</span></h2>
+      </div>
+      <div class="timeline">
+        <article class="reveal"><time>2019 TO 2023</time><div><small>REVA UNIVERSITY</small><h3>B.TECH COMPUTER SCIENCE</h3><p>Full-stack foundations, a hackathon team lead role, and published deep-learning research.</p></div></article>
+        <article class="reveal"><time>2024 TO 2026</time><div><small>MONASH UNIVERSITY</small><h3>MASTER OF ARTIFICIAL INTELLIGENCE</h3><p>Planning, reinforcement learning, computer vision, databases, cloud systems and applied AI delivery.</p></div></article>
+        <article class="reveal"><time>2025 TO NOW</time><div><small>MOSAIC · MONASH</small><h3>MARKETING MANAGER</h3><p>Supporting AI-for-social-good work connected to humanitarian, homelessness and aged-care challenges.</p></div></article>
+      </div>
+
+      <article class="research-ticket reveal">
+        <div class="ticket-label">PUBLISHED · 2023</div>
+        <div><p>RESEARCH</p><h3>PRODUCT CLASSIFICATION USING DEEP LEARNING</h3><span>ResNet-18 · 2.77M trainable parameters · 0.9 training accuracy</span></div>
+        <a href="https://www.ijarset.com/upload/2023/april/21-ROOPAM-may-03.pdf" target="_blank" rel="noopener">READ PAPER ↗</a>
+      </article>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="final-score" aria-hidden="true"><span>FULL TIME</span><b>17</b></div>
+      <div class="contact-inner reveal">
+        <p class="eyebrow">07 · FINAL WHISTLE</p>
+        <h2 id="contactTitle">BUILD THE<br><span>NEXT WIN.</span></h2>
+        <p>Open to graduate AI engineering, backend and applied machine-learning opportunities across Australia.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:sadatjunaid786@gmail.com">START A CONVERSATION ↗</a>
+          <a class="text-link" href="https://www.linkedin.com/in/sadatjunaid/" target="_blank" rel="noopener">LINKEDIN</a>
+          <a class="text-link" href="https://github.com/Invocate-coder17" target="_blank" rel="noopener">GITHUB</a>
+        </div>
+      </div>
+      <footer><span>SADAT JUNAID AKUNJEE</span><span>MELBOURNE · 2026</span><span>PLAYER 17</span></footer>
+    </section>
+  </main>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

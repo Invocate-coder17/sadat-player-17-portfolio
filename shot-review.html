@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Player 17 | Shot review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#050c14;color:#e8edf5;font:14px system-ui,sans-serif}main{height:100dvh;display:grid;grid-template-rows:1fr auto}canvas{width:100%;height:100%;min-height:0;display:block}footer{padding:16px 24px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;background:#0b1623;border-top:1px solid #294259}label{display:flex;gap:12px;align-items:center}input{accent-color:#50c9f5;max-width:25vw}button,a{background:transparent;border:1px solid #325266;color:inherit;padding:10px 14px;text-decoration:none;cursor:pointer}small{color:#9baebf;font-size:11px}#status{margin-left:auto}@media(max-width:600px){footer{padding:12px;gap:12px}input{max-width:38vw}#status{margin:0}}
+</style></head>
+<body><main><canvas id="reviewCanvas" aria-label="Three-dimensional football flight and photographic crowd preview"></canvas><footer><button id="play">PLAY SHOT</button><label>SHOT TIME <input id="time" aria-label="Shot time" type="range" min="0" max="7.9" value="7.3" step=".01"></label><label>INSPECT BALL <input id="rotation" aria-label="Ball rotation" type="range" min="0" max="6.28" value="0" step=".01"></label><button id="reset">FLIGHT CAMERA</button><a href="./">PORTFOLIO ↗</a><small id="status">LOADING THE SCENE</small></footer></main>
+<script type="module">
+import {createBallScene} from './src/ball-scene.js';
+const scene=createBallScene(document.getElementById('reviewCanvas'));
+const time=document.getElementById('time'),rotation=document.getElementById('rotation'),status=document.getElementById('status'),play=document.getElementById('play');
+let angle=null,playing=false,last=0,ready=false;
+function draw(){if(ready){scene.render(Number(time.value),angle);status.textContent=Number(time.value).toFixed(2)+'s · '+(angle===null?'FLIGHT CAMERA':'360° SURFACE REVIEW');}}
+time.addEventListener('input',()=>{playing=false;angle=null;play.textContent='PLAY SHOT';draw();});
+rotation.addEventListener('input',()=>{playing=false;angle=Number(rotation.value);play.textContent='PLAY SHOT';draw();});
+document.getElementById('reset').addEventListener('click',()=>{angle=null;draw();});
+play.addEventListener('click',()=>{playing=!playing;angle=null;if(Number(time.value)>=7.9)time.value=0;play.textContent=playing?'PAUSE':'PLAY SHOT';last=performance.now();});
+function tick(now){if(ready&&playing){time.value=Math.min(7.9,Number(time.value)+(now-last)/1000);draw();if(Number(time.value)>=7.9){playing=false;play.textContent='PLAY SHOT';}}last=now;requestAnimationFrame(tick);}
+addEventListener('resize',()=>{scene.resize();draw();});
+scene.ready.then(()=>{ready=true;scene.resize();draw();requestAnimationFrame(tick);}).catch(error=>{status.textContent='Preview unavailable: '+error.message;});
+</script></body></html>
